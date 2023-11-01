@@ -7,7 +7,7 @@ struct Node {
     int freq;
 };
 
-// Helper function to swap two Node elements in the min-heap
+// Function to SWAP two Node elements in the min-heap
 void swap(struct Node *x, struct Node *y) {
     struct Node temp = *y;
     *y = *x;
@@ -56,10 +56,11 @@ int main() {
     struct Node min_heap[58];
 
     // Initialize the size of the min-heap
-    int heap_size = 0;
+    
+    int heap_size = 0;//(No. of elements in heap currently)
 
     char alpha[58] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', '.',' ', ',', '$', '!', '&', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'};
-
+    // char alpha[] -> pre-defined array of possible characters in a file(Any character other than these characters will be considered as invalid).
     while (1) {
         ch = fgetc(fP);
         if (ch == EOF) {
